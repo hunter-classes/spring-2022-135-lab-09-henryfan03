@@ -39,3 +39,16 @@ void move(Coord3D *ppos, Coord3D *pvel, double dt) {
   ppos->y = newy;
   ppos->z = newz;
 }
+
+Coord3D* createCoord3D(double x, double y, double z) {
+  Coord3D* ptr = new Coord3D();
+  ptr->x = x;
+  ptr->y = y;
+  ptr->z = z;
+  //Coord3D* ptr = &newCord;
+  return ptr;
+}
+
+void deleteCoord3D(Coord3D *p) {
+  delete p;
+}
